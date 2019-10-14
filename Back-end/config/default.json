@@ -1,0 +1,10 @@
+{
+    "connectionString": {
+        "user": "wad0918_1074213",
+        "password": "Fujifuji1",
+        "server": "des-sql.ucn.dk\\DESSTUD",
+        "database": "wad0918_1074213"
+    },
+    "DEBUG": true,
+    "jwtPrivateKey": "muggleborns-not-allowed-here"
+}

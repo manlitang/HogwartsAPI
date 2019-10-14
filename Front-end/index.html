@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hogwarts API</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Hogwarts API"></a>
+        </div>
+
+        <div id="postBtn" onclick="document.getElementById('postID').style.display='block'">
+            POST
+        </div>
+
+        <div class="window" id="postID">
+            <form class="window-content animate" method="post">
+                <div class="close-button">
+                    <span onclick="document.getElementById('postID').style.display='none'" class="close" title="Close window">&times;</span>
+                </div>
+                
+                <div class="container post-container">
+                    <div class="text">
+                         <h1>Add New Character</h1>
+                         <img src="images/harryandhedwig.png" alt="The Marauder's Map">
+                    </div>
+
+                    <label for="firstname">First Name*</label>
+                    <input type="text" name="fname" id="fname" required>
+                
+                    <label for="lastname">Last Name*</label>
+                    <input type="text" name="lname" id="lname" required>
+
+                    <label for="aka">Also Known As</label>
+                    <input type="text" name="aka" id="aka">
+
+                    <label for="gender">Gender</label>
+                    <input type="text" name="gender" id="gender" required>
+
+                    <label for="bloodstatus">Bloodstatus</label>
+                    <input type="text" name="bloodstatus" id="bloodstatus" required>
+
+                    <label for="birthday">Date of Birth*</label>
+                    <input type="text" name="birthday" id="birthday" required>
+
+                    <label for="death">Date of Death</label>
+                    <input type="text" name="death" id="death">
+
+                    <label for="pet">Pet</label>
+                    <input type="text" name="pet" id="pet">
+
+                    <label for="wand">Wand</label>
+                    <input type="text" name="wand" id="wand">
+
+                    <label for="patronus">Patronus</label>
+                    <input type="text" name="patronus" id="patronus">
+
+                    <label for="boggart">Boggart</label>
+                    <input type="text" name="boggart" id="boggart">
+
+                    <label for="quote">Quote</label>
+                    <input type="text" name="quote" id="quote">
+                        
+                    <button type="submit" id="postSubmit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="login-icon" onclick="document.getElementById('loginID').style.display='block'">
+            <img src="images/user.png" alt="user login">
+        </div>
+
+        <div id="logout-icon">
+            <img src="images/logout.png" alt="user logout">
+        </div>
+
+        <div class="window" id="loginID">
+            <form class="window-content animate" method="post" id="loginForm">
+                <div class="close-button">
+                    <span onclick="document.getElementById('loginID').style.display='none'" class="close" title="Close window">&times;</span>
+                </div>
+                
+                <div class="container admin-container">
+                    <div class="text">
+                         <h1>Admin Login</h1>
+                         <img src="images/map.jpg" alt="The Marauder's Map">
+                    </div>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" name="email" id="emailInput" required>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" name="password" id="passwordInput" required>
+                        
+                    <a href="javascript:timedRefresh(2000)" id="loginSubmit">LOGIN</a>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h1>Hogwarts School of <br>Witchcraft and Wizardry</h1>
+            <div class="intro">
+                <p>Don't have 19 hours to have a Harry Potter marathon? How about checking out our web API? All the important characters, magical objects, creatures and movies... You can find it here.</p>
+
+                <p>To help you get started, simply click on your favourite house and the data will show down below. </p>
+            </div>
+        </section>
+
+        <div class="grey-background"></div>
+        <section id="listHouses">
+        </section>
+
+        <section>
+            <h2>Revelio!</h2>
+            <pre id="output"></pre>
+        </section>
+            
+        <section>
+            <h2>Continue exploring the magical world...</h2>
+            <form autofocus="autofocus" method="get">
+                <div class="input-wrapper">
+                    <input type="text" id="endpointPrefix" value="http://des-iis.ucn.dk:8213/api" readonly="readonly">
+                    <input type="text" id="endpointInput" value="/...">      
+                </div>
+                <div class="button-wrapper">
+                    <input type="submit" id="getSubmit" value="REQUEST">
+                </div>
+            </form>
+            <p class="note">Tip: Try /characters, /students, /staff, /magicalcreatures, /magicalobjects or /spells</p>
+        </section>
+
+    </main>
+<script src="script.js"></script>
+</body>
+</html>

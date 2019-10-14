@@ -1,0 +1,432 @@
+@charset "utf-8";
+
+
+::-webkit-scrollbar {
+    width: 15px;
+} 
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@font-face {
+    font-family: 'harryp__';
+    src:url('font/HARRYP__.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #000;
+    color: #E4E4E4;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+}
+
+section {
+    width: 70%;
+    padding: 1% 15% 1% 15%;
+}
+
+h1, h2 {
+    font-family: 'harryp__';
+    font-size: 400%;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 1%;
+}
+
+h2 {
+    font-size: 150%;
+    text-align: left;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+/* NAV */
+.logo, #login-icon, #logout-icon, #postBtn {
+    margin: 15px;
+} 
+
+.logo, #login-icon, #logout-icon {
+    width: 50px;
+}
+
+#login-icon, #logout-icon {
+    width: 30px;
+}
+
+.logo > img, #login-icon > img, #logout-icon > img {
+    width: 100%;
+}
+
+#login-icon, #logout-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#login-icon:hover, #logout-icon:hover {
+    cursor: pointer;
+}
+
+/* DON'T DISPLAY LOGOUT ICON AND POST BUTTON ON DEFAULT */
+
+#logout-icon, #postBtn {
+    display: none;
+}
+
+/* POST BUTTON WHEN LOGGED IN */
+
+#postBtn {
+    background-color: #E0B40B;
+    padding: 6px 20px;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    border-radius: 10px; 
+    font-family: 'Roboto Slab', serif;
+}
+
+#postBtn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* LOGIN POP-UP */
+
+.text h1 {
+    text-align: center;
+}
+
+.container > input[type=text], .container > input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    color: #000;
+    border-radius: 5px;
+    border: 0;
+}
+
+.container > input[type=password] {
+    margin-bottom: 30px;
+}
+  
+#postSubmit, #loginSubmit {
+    background-color: #1D841B;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#loginSubmit {
+    text-align: center;
+    padding: 3% 44%;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#postSubmit:hover, #loginSubmit:hover {
+    opacity: 0.8;
+}
+
+.close-button {
+    position: relative;
+}
+  
+.container {
+    padding: 16px;
+}
+
+.admin-container {
+    padding-bottom: 30px;
+}
+
+.post-container {
+    overflow: auto;
+}
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+  
+.window {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+}
+  
+
+.window-content {
+    color: #000;
+    background-color: #F2F2F2;
+    margin: 0 auto;
+    width: 30%; 
+}
+  
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #A10F0B;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* INTRODUCTION TEXT */
+
+.intro {
+    width: 55%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* HOGWARTS HOUSES */
+
+.grey-background {
+    background-color: #222222;
+    width: 100%;
+    height: 33%;
+    margin-top: 8%;
+    z-index: -1;
+    position: absolute;
+}
+
+.houseDiv {
+    width: 22%;
+    margin-left: 4%;
+    display: inline-block;
+}
+
+.houseDiv > h1 {
+    font-size: 250%;
+    padding: 5%;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.zoom {
+    transition: transform .5s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.noMargin {
+    margin-left: 0;
+}
+
+#listHouses {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/* DATA OUTPUT WINDOW */
+
+pre {
+    height: 30vh;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 20px;
+    background-color: #353535;
+    padding: 40px;
+    margin: 0;
+    overflow: auto;
+    white-space: pre-wrap;
+    border-radius: 8px;
+}
+
+/* INPUT FIELD AND BUTTON */
+
+form {
+    width: 100%;
+}
+
+.input-wrapper {
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    width: 54vw;
+}
+
+.button-wrapper {
+    width: 15vw;
+    display: inline-block;
+    float: right;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.input-wrapper > input[type=text] {
+    display: inline-block;
+    border-radius: 5px;
+    border: 0;
+    background-color: #353535;
+    width: 40%;
+    height: 18px;
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+}
+
+#endpointPrefix {
+    width: 216px;
+}
+
+#endpointInput {
+    width: 65%;
+}
+
+input:focus, textarea {
+    outline: none !important;
+}
+
+.prefix {
+    position: absolute;
+    display: block;
+    z-index: 9;
+    left: 10px;
+    top: 10px;
+}
+
+.button-wrapper > input[type=submit] {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #1D841B;
+    color: #fff; 
+}
+
+#getSubmit:hover {
+    opacity: 0.8;
+}
+
+.note {
+    display: inline-block;
+    font-size: 80%;
+    padding: 0;
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 800px) {
+	section {
+        width: 90%;
+        padding: 1% 5%;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+
+    h2{
+        font-size: 150%;
+        margin-top: 5%;
+    }
+
+    .houseDiv > h1 {
+        font-size: 150%;
+    }
+
+    .intro {
+        width: 90%;
+    }
+
+    .grey-background {
+        margin-top: 15%;
+        height: 52%;
+    }
+
+    .houseDiv {
+        width: 40%;
+    }
+
+    .button-wrapper, .input-wrapper {
+        margin-top: 2%;
+        width: 100%;
+    }
+
+    #endpointPrefix, #endpointInput {
+        width: 94%;
+        margin-top: 1%;
+    }
+
+    #endpointInput {
+        margin-right: 0;
+    }
+
+    .window-content {
+        width: 80%;
+    }
+
+    pre {
+        padding: 20px;
+    }
+}
+
+
+
+
+
